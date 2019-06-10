@@ -8,11 +8,12 @@ const TableBody = props => {
     const time = <Clock format={'HH:mm:ss'} />;
 
     const rows = props.commentData.map((row, index) => {
+        let validComment = row.comment.replace(/(<([^>]+)>)/ig,"");
 
         return (
             <div className="task" key={index}>
                 <div className="name-task">Name: {row.name}</div>
-                <div className="task-description">Comment: {row.comment}</div>
+                <div className="task-description">Comment: {validComment}</div>
                 <div>
                     <span data-date="date">Date: {date} </span>
                     <span data-time="time"> Time: {time} </span>
