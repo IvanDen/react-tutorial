@@ -29,6 +29,6 @@
     ]
   },
   "devDependencies": {
-    "react-live-clock": "^3.1.0"
+    "react-live-clock": "^6.0.6"
   }
 }
